@@ -27,15 +27,28 @@ Also, upload a screenshot of your console output.
 
 #include <iostream>
 using   namespace std; 
-
 int main ()
-
  {
-
-
-
-
-
-
-
+    int roomTemp;
+	cout << "Enter your room temperature ";
+	cin >> roomTemp;
+	if (roomTemp > 90 || roomTemp <= 55) 
+	{
+		cout << "Visit a neighbor";
+	}
+	else if (roomTemp <= 90 && roomTemp > 80)
+	{
+		cout << "Turn on air conditioning";
+	}
+	else if (roomTemp <= 80 && roomTemp > 70)
+	{
+		cout << "Do nothing";
+	}
+	else if (roomTemp <= 70 && roomTemp > 55)
+	{
+		cout << "Turn on heat";
+	}
+	else {
+		return 0;
+	}
 }
